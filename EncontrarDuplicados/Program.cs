@@ -3,15 +3,29 @@ using System.Collections.Generic;
 
 namespace EncontrarDuplicados
 {
-    internal class Program
+    public class Program
     {
         const string letters = "abcdefghijklmnopqrstuvwxyz";
         static void Main(string[] args)
         {
+            List<string> list = GenerateRandomWords(10000);
+
+            bool hayDuplicadas = CheckDuplicates(list);
+            if (hayDuplicadas)
+            {
+                Console.WriteLine("Hay duplicados");
+            }
+            else
+            {
+                Console.WriteLine("No hay duplicados");
+            }
+        }
+
+        static public List<string> GenerateRandomWords(int n)
+        {
             Random rand = new Random();
             List<string> list = new List<string>();
-            List<string> duplicadas = new List<string>();
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < n; i++)
             {
                 string palabra = "";
                 for (int j = 0; j < 3; j++)
@@ -20,22 +34,32 @@ namespace EncontrarDuplicados
                 }
                 list.Add(palabra);
             }
-            list.Add(list[0]);
+            return list;
+        }
 
-            string palabracomp = list[0];
+        static public bool CheckDuplicates(List<string> list)
+        {
+            List<string> duplicadas = new List<string>();
+
             for (int i = 0; i < list.Count; i++)
             {
-                if (i == 0)
+                string palabracomp = list[i];
+                for (int j = 0; j < list.Count; j++)
                 {
-                    continue;
-                }
-                if (palabracomp == list[i])
-                {
-                    duplicadas.Add(palabracomp);
-                    break;
+                    if (j == i)
+                    {
+                        continue;
+                    }
+                    if (palabracomp == list[j])
+                    {
+                        duplicadas.Add(palabracomp);
+                        break;
+                    }
                 }
             }
 
+            return duplicadas.Count > 0;
         }
+
     }
 }
