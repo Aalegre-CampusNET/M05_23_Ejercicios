@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedianaMediaModa", "MedianaMediaModa\MedianaMediaModa.csproj", "{4201F705-B462-4765-AB0D-18A4C3D6A91B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MedianaMediaModa", "MedianaMediaModa\MedianaMediaModa.csproj", "{4201F705-B462-4765-AB0D-18A4C3D6A91B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EncontrarDuplicados", "EncontrarDuplicados\EncontrarDuplicados.csproj", "{330D5C34-E91E-41A5-9FDD-13605FAD60B3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4201F705-B462-4765-AB0D-18A4C3D6A91B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4201F705-B462-4765-AB0D-18A4C3D6A91B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4201F705-B462-4765-AB0D-18A4C3D6A91B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{330D5C34-E91E-41A5-9FDD-13605FAD60B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{330D5C34-E91E-41A5-9FDD-13605FAD60B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{330D5C34-E91E-41A5-9FDD-13605FAD60B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{330D5C34-E91E-41A5-9FDD-13605FAD60B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
